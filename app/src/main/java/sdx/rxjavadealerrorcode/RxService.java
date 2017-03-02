@@ -1,7 +1,5 @@
 package sdx.rxjavadealerrorcode;
 
-import com.gogo.vkan.comm.constant.Constants;
-import com.gogo.vkan.comm.constant.NetConstants;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

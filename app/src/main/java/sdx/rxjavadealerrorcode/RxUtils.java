@@ -1,13 +1,5 @@
 package sdx.rxjavadealerrorcode;
 
-import com.gogo.vkan.api.MyApi;
-import com.gogo.vkan.api.RxService;
-import com.gogo.vkan.business.exception.AppException;
-import com.gogo.vkan.business.log.LogHelper;
-import com.gogo.vkan.business.manager.TokenManager;
-import com.gogo.vkan.comm.constant.Constants;
-import com.gogo.vkan.domain.ResultDomain;
-import com.gogo.vkan.domain.http.HttpResultStringDomain;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
@@ -15,8 +7,6 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-import static com.gogo.vkan.business.exception.AppException.CODE_ERROR_LOGIN_OUT;
-import static com.gogo.vkan.business.exception.AppException.CODE_ERROR_TOKEN;
 import static sdx.rxjavadealerrorcode.AppException.CODE_ERROR_LOGIN_OUT;
 import static sdx.rxjavadealerrorcode.AppException.CODE_ERROR_TOKEN;
 
@@ -165,7 +155,7 @@ public class RxUtils {
                                                 @Override
                                                 public void call(ResultDomain<String> stringResultDomain) {
                                                     tryCount = RETRY_TIME;
-                                                    // TODO: 2017/3/2 处理token 
+                                                    // TODO: 2017/3/2 处理token
                                                 }
                                             }).doOnError(new Action1<Throwable>() {
                                                 @Override

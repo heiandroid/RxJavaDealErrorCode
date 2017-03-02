@@ -4,11 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.text.TextUtils;
 
-import com.gogo.vkan.android.app.App;
-import com.gogo.vkan.comm.uitl.StringUtils;
-import com.gogo.vkan.comm.uitl.ToastSingle;
-
-import static android.text.TextUtils.isEmpty;
 
 /**
  * Created by sdx on 2016/10/14.

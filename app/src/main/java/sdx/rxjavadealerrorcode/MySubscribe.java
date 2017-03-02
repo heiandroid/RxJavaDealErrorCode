@@ -2,12 +2,6 @@ package sdx.rxjavadealerrorcode;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.v7.widget.DialogTitle;
-
-import com.gogo.vkan.business.exception.AppException;
-import com.gogo.vkan.business.log.LogHelper;
-import com.gogo.vkan.ui.activitys.user.manager.UserManager;
-import com.gogo.vkan.ui.view.ProgressDialog;
 
 import rx.Subscriber;
 

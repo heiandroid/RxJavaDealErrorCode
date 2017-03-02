@@ -28,7 +28,18 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                 RxService.createApi(MyApi.class).getdata()
-                        .compose(RxUtils.<Data>preResult())
+                        .compose(RxUtils.<Data>preDataResult())
+                        .subscribe(new MySubscribe<Data>(MainActivity.this) {
+                            @Override
+                            public void onSucceeded(Data data) {
+                                // TODO: 2017/3/2 处理获取到的数据
+                            }
+
+                            @Override
+                            public void onFailed(Throwable e) {
+                            // TODO: 2017/3/2 错误
+                            }
+                        });
             }
         });
     }
