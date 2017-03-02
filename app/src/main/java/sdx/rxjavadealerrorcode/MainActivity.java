@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                                 // TODO: 2017/3/2 错误 
                             }
                         });
+                RxService.createApi(MyApi.class).getdata()
+                        .compose(RxUtils.<Data>preResult())
             }
         });
     }
