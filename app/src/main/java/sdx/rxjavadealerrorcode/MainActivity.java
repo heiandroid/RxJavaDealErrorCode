@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //如果请求某个接口但是token过期.或者用户需要退出登录,等等其他信息都可以在这里统一处理了
                 RxService.createApi(MyApi.class).getdata()
                         .compose(RxUtils.<Data>preResult())
                         .subscribe(new MySubscribe<ResultDomain<Data>>(MainActivity.this) {
